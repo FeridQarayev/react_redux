@@ -1,11 +1,14 @@
 import React from "react";
+import { toast, Toaster } from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { addFavousData } from "../redux/favous/favous";
 import { Link, useParams } from "react-router-dom";
 import "./style.css";
 
 function Detail() {
   let Data = useParams();
   const data = JSON.parse(Data.Data);
-  // console.log(data);
+  const dispatch = useDispatch();
   return (
     <div className="body">
       <div className="detail">
@@ -38,7 +41,17 @@ function Detail() {
           {data.address.postalCode}
         </p>
         <div>
-          <button className="favosBtn">Add to favorites</button>
+          <button
+            className="favosBtn"
+            onClick={() => {
+              toast.success("Customer added to favorites successfully!");
+              dispatch(
+                addFavousData({ id: data.id, name: data.companyName })
+              );
+            }}
+          >
+            Add to favorites
+          </button>
         </div>
       </div>
       <div className="body_down">
@@ -46,6 +59,7 @@ function Detail() {
           <Link to={"/customers"}>Go Back</Link>
         </button>
       </div>
+      <Toaster position="bottom-right" reverseOrder={false} />
     </div>
   );
 }

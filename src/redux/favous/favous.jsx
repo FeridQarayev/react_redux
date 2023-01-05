@@ -1,23 +1,20 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
 
 export const favousSlice = createSlice({
-    name: 'favous',
-    initialState: { 
-        value: 0 
+  name: "favous",
+  initialState: {
+    value: [],
+  },
+  reducers: {
+    addFavousData: (state, action) => {
+      state.value.push(action.payload);
     },
-    reducers: {
-        // increment: (state) => {
-        //     state.value += 1;
-        // },
-        // decrement: (state) => {
-        //     state.value -= 1;
-        // },
-        // incrementByAmount: (state, action) => {
-        //     state.value += parseFloat(action.payload)
-        // },
-    }
-})
+    resetFavous: (state) => {
+      state.value = [];
+    },
+  },
+});
 
-// export const { increment, decrement, incrementByAmount } = counterSlice.actions
+ export const { addFavousData, resetFavous } = favousSlice.actions
 
-export default favousSlice.reducer
+export default favousSlice.reducer;
