@@ -160,6 +160,12 @@ function Customers() {
       sortDirections: ["descend", "ascend"],
     },
     {
+      title: "Adress",
+      dataIndex: ["address", "street"],
+      key: "address",
+      width: "30%"
+    },
+    {
       title: "Detail",
       key: "detail",
       width: "20%",
