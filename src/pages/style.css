@@ -37,3 +37,59 @@
     margin: 0px;
     padding: 0px;
 }
+
+.body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.body button{
+    border-radius: 6px;
+    padding: 10px 24px;
+    background-color: lightgreen;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;}
+.detailBtn{
+        background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+        color: inherit;
+    text-decoration: none;
+}
+.favousBtn{
+    background-color: #add8e6 !important;
+}
+.detail{
+    border: 3px dotted #f3f3f3;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 7px 29px 0 hsl(240deg 5% 41% / 20%);
+    padding: 25px 0;
+    width: 50%;
+    text-align: center;
+    margin: 40px auto 0;
+}
+.detail h3{
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 500;
+}
+.detail p{
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.favosBtn{
+    border-radius: 6px !important;
+    padding: 10px 24px !important;
+    background-color: #add8e6 !important;
+    border: none !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.body_down{
+    text-align: center;
+    margin-top: 40px;
+}

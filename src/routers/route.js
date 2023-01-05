@@ -24,7 +24,7 @@ export const ROUTES = [
           element: <Favourites />,
         },
         {
-          path: "country/:Data",
+          path: "detail/:Data",
           element: <Detail />,
         },
       ],
