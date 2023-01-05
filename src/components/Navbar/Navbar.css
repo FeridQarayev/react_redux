@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;;
+}
+body{
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    line-height: 1.5715;
+}
+.navbar .container{
+    height: 80px;
+    background-color: hotpink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+    padding: 0 30px;
+}
+.navbar h3{
+    cursor: pointer;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    color: #f3f3f3;
+    font-weight: 700;
+    margin-right: 15px;
+}
+.navbar sup{
+    position: relative;
+    top: -0.9em;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
