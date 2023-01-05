@@ -173,7 +173,7 @@ function Customers() {
   ];
   return (
     <div className='body'>
-      <Table rowKey={customers.id} columns={columns} dataSource={customers} />
+      <Table rowKey={recorder=>recorder.id} columns={columns} dataSource={customers} />
     </div>
   );
 }

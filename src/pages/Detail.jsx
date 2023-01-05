@@ -4,8 +4,8 @@ import "./style.css";
 
 function Detail() {
   let Data = useParams();
-  const data =JSON.parse(Data.Data);
-  console.log(data);
+  const data = JSON.parse(Data.Data);
+  // console.log(data);
   return (
     <div className="body">
       <div className="detail">
@@ -27,13 +27,15 @@ function Detail() {
         </p>
         <p>
           <b>Customer Address: </b>
-          
+          {`${data.address.country}, ${data.address.city}`}
         </p>
         <p>
-          <b>Customer Phone:</b>
+          <b>Customer Phone: </b>
+          {data.address.phone}
         </p>
         <p>
-          <b>Customer Postal Code:</b>
+          <b>Customer Postal Code: </b>
+          {data.address.postalCode}
         </p>
         <div>
           <button className="favosBtn">Add to favorites</button>
